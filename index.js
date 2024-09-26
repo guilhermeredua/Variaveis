@@ -1,3 +1,6 @@
+const prompt = require('prompt-sync');
+const entrada = prompt('')
+
 let anoAtual = 2024;
 const nomeCompleto = "Guilherme Henrique Diniz Gemeno Rédua";
 let idade = 17;
@@ -13,9 +16,9 @@ console.log(`Olá eu sou o ${nomeCompleto} eu tenho ${idadeFutura}, moro em ${ci
 
 //Agência de viagens
 
-const nomeComprador = "Adilson";
-const cpfComprador = 123456789;
-const idadeComprador = 12;
+var nomeComprador = entrada("Qual é o seu nome?");
+const cpfComprador = entrada("Qual é o seu CPF?");
+var idadeComprador = entrada("Qual é sua idade?");
 const listaDestinos = new Array(
  " Viena",
  " Varsóvia",
@@ -32,4 +35,14 @@ console.log("");
 console.log(`Olá senhor ${nomeComprador}, adicionamos uma nova viagem em sua lista de interesses.`);
 
 listaDestinos.push("Salzburgo");
-console.log(listaDestinos);
+
+var idadeComprador = 18;
+
+if(idadeComprador < 18) {
+  console.log(`Infelizmente não podemos lhe vender o produto, pois o (a) Sr. (a) é menor de idade.`)
+} 
+
+if(idadeComprador >= 18) {
+  console.log(`Parabéns, sua compra foi realizada com sucesso!.`)
+} 
+
